@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        form {
+            background-color: lightgrey;
+            margin: 30px;
+        }
+
+        input, select, textarea, label {
+            padding: 10px;
+            margin: 10px;
+            font-size: 1em;
+            width: 90%;
+        }
+
+        select {
+            width: 95%;
+            box-sizing: border-box;
+        }
+
+        label {
+            margin: 0px;
+        }
+
+        input[type=text], 
+        input[type=password],
+        input[type=date],
+        input[type=search],
+        input[type=range],
+        input[type=week],
+        input[type=number],
+        textarea,
+        select
+        {
+            border: none;
+            border-bottom: 3px solid rgb(55, 0, 255);
+            background-color: rgb(240, 240, 232);
+            border-radius: 2px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus,
+        button:focus
+        {
+            outline: 4px solid red;
+        }
+
+
+        input[type=radio],
+        input[type=checkbox] {
+            width: 20px;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            font-size: 1em;
+            width: 200px;
+            margin: 10px;
+        }
+
+        button:hover{
+            background-color: darkmagenta;
+        }
+    </style>
+</head>
+<body>
+    <form method="get">
+        <fieldset>
+            <legend>Formularz kontaktowy</legend>
+        <label for="imie">Imię:</label><br>
+        <input type="text" placeholder="Podaj imię" id="imie" name="imie"><br>           
+        <label for="nazwisko">Nazwisko</label><br>
+        <input type="text" id="nazwisko" name="nazwisko"><br>
+        <label for="haslo">Hasło</label><br>
+        <input type="password" id="haslo"><br>
+        <label for="platnosc">Wybierz płatność</label><br>
+        <select id="platnosc" size="3">
+            <option>Karta debetowa</option>
+            <option>Karta kredytowa</option>
+            <option>PayPal</option>
+        </select><br>
+        <textarea rows="10">
+
+        </textarea>
+        <br>
+        <label for="zgoda">Zapoznałem się z regulaminem</label>
+        <input type="checkbox" id="zgoda" checked>
+        <br>
+        <input type="radio" id="red" name="mmm">
+        <label for="red">Czerwony</label><br>
+        <input type="radio" id="green" name="mmm">
+        <label for="green">Zielony</label><br>
+        <input type="radio" id="blue" name="mmm">
+        <label for="blue">Niebieski</label><br>
+        <br>
+        <input type="date">
+        <br>
+        <input type="file">
+        <br>
+        <input type="number" min="0" max="10" value="3" readonly>
+        <input type="range" min="0" max="10"><br>
+
+        <input type="search">
+        <input type="week">
+
+
+        <br>
+        <button type="submit">Zamów</button>
+    </fieldset>
+    </form>
+</body>
+</html>
